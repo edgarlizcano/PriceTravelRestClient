@@ -1,6 +1,7 @@
 export class Insurance {
     private _Currency: string;
     private _Amount: number;
+    private _InsuranceName: string;
     private _InsuranceType: number;
     private _InsuranceItemId: number;
     private _InsuranceRateId: number;
@@ -13,10 +14,14 @@ export class Insurance {
     private _EndDate: string;
     private _TotalAmount: number;
     private _Type: number;
+    private _PurchaseCountry: string;
+    private _Destination: string;
+    private _InsuredPaxCount: number;
 
-    constructor(Currency: string, Amount: number, InsuranceType: number, InsuranceItemId: number, InsuranceRateId: number, Name: string, Description: string, IsDefault: boolean, Adults: number, Kids: number, StartDate: string, EndDate: string, TotalAmount: number, Type: number) {
+    constructor(Currency: string, Amount: number, InsuranceName: string, InsuranceType: number, InsuranceItemId: number, InsuranceRateId: number, Name: string, Description: string, IsDefault: boolean, Adults: number, Kids: number, StartDate: string, EndDate: string, TotalAmount: number, Type: number, PurchaseCountry: string, Destination: string, InsuredPaxCount: number) {
         this._Currency = Currency;
         this._Amount = Amount;
+        this._InsuranceName = InsuranceName;
         this._InsuranceType = InsuranceType;
         this._InsuranceItemId = InsuranceItemId;
         this._InsuranceRateId = InsuranceRateId;
@@ -29,6 +34,9 @@ export class Insurance {
         this._EndDate = EndDate;
         this._TotalAmount = TotalAmount;
         this._Type = Type;
+        this._PurchaseCountry = PurchaseCountry;
+        this._Destination = Destination;
+        this._InsuredPaxCount = InsuredPaxCount;
     }
 
     get Currency(): string {
@@ -45,6 +53,14 @@ export class Insurance {
 
     set Amount(value: number) {
         this._Amount = value;
+    }
+
+    get InsuranceName(): string {
+        return this._InsuranceName;
+    }
+
+    set InsuranceName(value: string) {
+        this._InsuranceName = value;
     }
 
     get InsuranceType(): number {
@@ -141,5 +157,29 @@ export class Insurance {
 
     set Type(value: number) {
         this._Type = value;
+    }
+
+    get PurchaseCountry(): string {
+        return this._PurchaseCountry;
+    }
+
+    set PurchaseCountry(value: string) {
+        this._PurchaseCountry = value;
+    }
+
+    get Destination(): string {
+        return this._Destination;
+    }
+
+    set Destination(value: string) {
+        this._Destination = value;
+    }
+
+    get InsuredPaxCount(): number {
+        return this._InsuredPaxCount;
+    }
+
+    set InsuredPaxCount(value: number) {
+        this._InsuredPaxCount = value;
     }
 }

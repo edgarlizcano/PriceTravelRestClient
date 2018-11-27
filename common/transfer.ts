@@ -16,8 +16,11 @@ export class Transfer {
     private _HotelId: number;
     private _TotalAmount: number;
     private _Type: number;
+    private _PaxCount: number;
+    private _HotelName: string;
+    private _Airport: string;
 
-    constructor(Id: number, TransferRateId: number, TransferType: number, ArrivalDate: string, ArrivalTime: string, ArrivalFlightNumber: string, ArrivalFlightAirline: string, DepartureDate: string, DepartureTime: string, DepartureFlightNumber: string, DepartureFlightAirline: string, NumberOfAdults: number, ChildAges: number[], AirportCode: string, HotelId: number, TotalAmount: number, Type: number) {
+    constructor(Id: number, TransferRateId: number, TransferType: number, ArrivalDate: string, ArrivalTime: string, ArrivalFlightNumber: string, ArrivalFlightAirline: string, DepartureDate: string, DepartureTime: string, DepartureFlightNumber: string, DepartureFlightAirline: string, NumberOfAdults: number, ChildAges: number[], AirportCode: string, HotelId: number, TotalAmount: number, Type: number, PaxCount: number, HotelName: string, Airport: string) {
         this._Id = Id;
         this._TransferRateId = TransferRateId;
         this._TransferType = TransferType;
@@ -35,6 +38,9 @@ export class Transfer {
         this._HotelId = HotelId;
         this._TotalAmount = TotalAmount;
         this._Type = Type;
+        this._PaxCount = PaxCount;
+        this._HotelName = HotelName;
+        this._Airport = Airport;
     }
 
     get Id(): number {
@@ -171,5 +177,29 @@ export class Transfer {
 
     set Type(value: number) {
         this._Type = value;
+    }
+
+    get PaxCount(): number {
+        return this._PaxCount;
+    }
+
+    set PaxCount(value: number) {
+        this._PaxCount = value;
+    }
+
+    get HotelName(): string {
+        return this._HotelName;
+    }
+
+    set HotelName(value: string) {
+        this._HotelName = value;
+    }
+
+    get Airport(): string {
+        return this._Airport;
+    }
+
+    set Airport(value: string) {
+        this._Airport = value;
     }
 }
