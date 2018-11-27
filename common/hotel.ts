@@ -1,4 +1,4 @@
-import {Hotelinformation} from "./hotelinformation";
+import {HotelInformation} from "./hotelinformation";
 import {Room} from "./room";
 import {Image} from "./image";
 
@@ -7,12 +7,12 @@ class Hotel {
     private _Name: string;
     private _Uri: string;
     private _IsActive: boolean;
-    private _HotelInformation: Hotelinformation;
+    private _HotelInformation: HotelInformation;
     private _Rooms: Room[];
     private _Images: Image[];
     private _AverageRateWithTax: number;
 
-    constructor(Id: number, Name: string, Uri: string, IsActive: boolean, HotelInformation: Hotelinformation, Rooms: Room[], Images: Image[], AverageRateWithTax: number) {
+    constructor(Id: number, Name: string, Uri: string, IsActive: boolean, HotelInformation: HotelInformation, Rooms: Room[], Images: Image[], AverageRateWithTax: number) {
         this._Id = Id;
         this._Name = Name;
         this._Uri = Uri;
@@ -55,11 +55,11 @@ class Hotel {
         this._IsActive = value;
     }
 
-    get HotelInformation(): Hotelinformation {
+    get HotelInformation(): HotelInformation {
         return this._HotelInformation;
     }
 
-    set HotelInformation(value: Hotelinformation) {
+    set HotelInformation(value: HotelInformation) {
         this._HotelInformation = value;
     }
 

@@ -1,6 +1,6 @@
 import {Service} from "./service";
 
-export class Hotelinformation {
+export class HotelInformation {
     private _Address:    string;
     private _City:       string;
     private _State:      string;
